@@ -1,0 +1,334 @@
+/* style.css */
+
+/* Mengatur default margin dan font keseluruhan halaman */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gaya navigasi atas */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00aaff;
+  padding: 10px 20px;
+  border-bottom: 4px solid #0077aa;
+}
+
+/* Logo dan teks Pantai Carita */
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.logo span {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Navigasi menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Kontainer utama */
+.container {
+  padding: 20px;
+  border: 2px solid #00aaff;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Gaya khusus banner slideshow di halaman profile */
+.banner-wrapper {
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+  border: 2px solid #0077aa;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Seksi informasi di halaman profil */
+.profile-section {
+  border: 2px solid #0077aa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Gambar banner slideshow */
+#bannerSlide {
+  width: 100%;
+  image-rendering: crisp-edges;
+  object-fit: cover;
+}
+
+/* Judul sambutan */
+#greeting {
+  text-align: center;
+}
+
+/* Form input nama pengunjung */
+#nameForm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#nameForm input {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+#nameForm button {
+  width: auto;
+  padding: 10px 20px;
+}
+
+/* Elemen input, textarea, dan tombol */
+input, textarea, button {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Tombol default */
+button {
+  background-color: #0077aa;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f88;
+}
+
+/* ============ MEDIA QUERY UNTUK RESPONSIVE DESIGN ============ */
+
+/* Ukuran tablet: max-width 768px */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    margin-bottom: 5px;
+  }
+
+  #nameForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nameForm input,
+  #nameForm button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Ukuran smartphone: max-width 480px */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .banner-wrapper {
+    height: auto;
+  }
+
+  .banner {
+    height: auto;
+  }
+
+  .profile-section,
+  .container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  form,
+  #output {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  main.container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #contactForm {
+    flex-direction: column;
+  }
+
+  #contactForm div {
+    width: 100%;
+  }
+}
+
+/* ====== ANIMASI & ELEMEN TAMBAHAN ====== */
+
+/* Burung terbang (dari kanan ke kiri) */
+.bird {
+  position: fixed;
+  top: 100px;
+  left: -100px;
+  width: 60px;
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
+  animation: flapWings 1.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Animasi mengepakkan sayap burung */
+@keyframes flapWings {
+  0%, 100% {
+    transform: scaleX(var(--direction, 1)) scaleY(1);
+  }
+  50% {
+    transform: scaleX(var(--direction, 1)) scaleY(0.85);
+  }
+}
+
+/* Ombak bergerak di bagian bawah layar */
+.wave-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+/* (Opsional, belum aktif) Animasi gelombang */
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pohon kelapa goyang oleh angin */
+.pohon-kelapa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 160px;
+  z-index: 5;
+  pointer-events: none;
+  animation: sway 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes sway {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-2.5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Tombol kontrol audio (posisi dan gaya) */
+#audioControl {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  z-index: 9999;
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+  padding: 6px 10px;
+  pointer-events: auto;
+}
+
+/* Gaya tambahan untuk tombol audio jika dalam elemen <button> */
+#audioControl button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  color: #333;
+}
