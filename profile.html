@@ -1,0 +1,77 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantai Carita - Profile</title>
+
+  <!-- Import font dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Import file CSS utama -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigasi utama -->
+  <nav class="navbar">
+    <div class="logo">
+      <!-- Logo Pantai Carita -->
+      <img src="img/logo.jpg" alt="Logo Pantai Carita">
+      <span>Pantai Carita</span>
+    </div>
+    <!-- Daftar tautan navigasi -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="message.html">Message Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Konten utama halaman -->
+  <main class="container">
+
+    <!-- Wrapper untuk slideshow banner -->
+    <div class="banner-wrapper">
+      <!-- Gambar banner yang berganti otomatis (slideshow) -->
+      <img src="img/banner1.jpg" alt="Banner Pantai Carita" class="banner" id="bannerSlide">
+    </div>
+
+    <!-- Bagian deskripsi profil -->
+    <div class="profile-section">
+      <h2>About Pantai Carita</h2>
+      <p>Pantai Carita terletak di Banten dan terkenal dengan keindahan alam serta akses yang mudah. Cocok untuk keluarga, teman, dan kegiatan wisata alam lainnya.</p>
+    </div>
+
+    <!-- Bagian visi -->
+    <div class="profile-section">
+      <h3>Visi</h3>
+      <p>Menjadi destinasi wisata alam unggulan yang berwawasan lingkungan dan budaya.</p>
+    </div>
+
+    <!-- Bagian misi -->
+    <div class="profile-section">
+      <h3>Misi</h3>
+      <ul>
+        <li>Menyediakan fasilitas wisata yang ramah lingkungan</li>
+        <li>Menjaga kebersihan dan kelestarian alam pantai</li>
+        <li>Memberdayakan masyarakat lokal sebagai mitra wisata</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Gambar burung untuk animasi terbang -->
+  <img src="img/bird.jpg" alt="Burung terbang" class="bird" id="flyingBird" />
+
+  <!-- Animasi ombak di bagian bawah halaman -->
+  <div class="wave-container">
+    <img src="img/wave.jpg" alt="Ombak" class="wave" id="movingWave" />
+  </div>
+
+  <!-- Gambar pohon kelapa sebagai elemen hiasan -->
+  <img src="img/kelapa.jpg" alt="Pohon Kelapa" class="pohon-kelapa" />
+
+  <!-- Import file JavaScript untuk animasi dan slideshow -->
+  <script src="js/script.js"></script>
+</body>
+</html>
